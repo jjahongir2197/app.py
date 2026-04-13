@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Names Statistics</title>
+
+<style>
+
+body {
+
+font-family: Arial;
+
+background-color: #fff3e6;
+
+padding: 20px;
+
+}
+
+.container {
+
+display: flex;
+
+flex-wrap: wrap;
+
+}
+
+.card {
+
+background-color: white;
+
+padding: 15px;
+
+margin: 10px;
+
+border-radius: 10px;
+
+width: 250px;
+
+box-shadow: 0px 0px 5px gray;
+
+}
+
+.info {
+
+margin-top: 20px;
+
+background-color: #ffe0b3;
+
+padding: 20px;
+
+border-radius: 10px;
+
+width: 60%;
+
+}
+
+h1 {
+
+color: darkorange;
+
+}
+
+h2 {
+
+color: #333;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Names Statistics</h1>
+
+<div class="container">
+
+{% for n in lengths %}
+
+<div class="card">
+
+<h2>{{ n.name }}</h2>
+
+<p>Length:
+<strong>{{ n.length }}</strong>
+letters
+</p>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<div class="info">
+
+<h2>Longest Name:
+<strong>{{ longest }}</strong>
+</h2>
+
+<h2>Shortest Name:
+<strong>{{ shortest }}</strong>
+</h2>
+
+<h2>Average Length:
+<strong>{{ average_length }}</strong>
+</h2>
+
+</div>
+
+</body>
+</html>
